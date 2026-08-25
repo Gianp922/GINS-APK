@@ -5,24 +5,23 @@ Android GNSS  APP—— 完整实现方案
 一、项目结构与配置
 app/src/main/
 
-├── AndroidManifest.xml
-├── java/com/gnss/locator/
-
-│   ├── MainActivity.kt            # 室外定位模式
-│   ├── IndoorActivity.kt          # 室内定位模式（TDOA）
-│   ├── MapViewActivity.kt         # 地图显示
-│   ├── SettingsActivity.kt        # 参数设置
-│   ├── gnss/
-│   │   ├── GnssService.kt         # GNSS采集（位置+原始观测+星历）
-│   │   ├── PseudorangeCalculator.kt
-│   │   ├── NavigationMessageParser.kt  # GPS星历解析
-│   │   └── SatellitePosition.kt   # 开普勒轨道计算
-│   ├── solver/
-│   │   ├── WlsSolver.kt           # WLS定位解算
-│   │   └── TdoaSolver.kt          # 室内伪距差定位（数值优化）
-│   └── util/
-│       ├── CoordinateUtils.kt     # ECEF/LLH/ENU转换、方位角俯仰角
-│       └── Prefs.kt               # 配置存储
+├── AndroidManifest.xml  
+├── java/com/gnss/locator/    
+│  	   ├── MainActivity.kt            # 室外定位模式      
+│ 	   ├── IndoorActivity.kt          # 室内定位模式（TDOA）    
+│ 	   ├── MapViewActivity.kt         # 地图显示      
+│  	   ├── SettingsActivity.kt        # 参数设置    
+│  	   ├── gnss/    
+│      │     ├── GnssService.kt         # GNSS采集（位置+原始观测+星历）    
+│      │     ├── PseudorangeCalculator.kt    
+│      │     ├── NavigationMessageParser.kt  # GPS星历解析    
+│      │     └── SatellitePosition.kt   # 开普勒轨道计算    
+│      ├── solver/     
+│      │     ├── WlsSolver.kt           # WLS定位解算    
+│      │     └── TdoaSolver.kt          # 室内伪距差定位（数值优化）    
+│      └── util/    
+│            ├── CoordinateUtils.kt     # ECEF/LLH/ENU转换、方位角俯仰角     
+│            └── Prefs.kt               # 配置存储    
 └── res/layout/ (activity_main.xml 等)
 
 编译与运行说明
